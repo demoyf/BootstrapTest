@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--让ie以最高版本的可用模式渲染显示内容-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--响应式-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Title</title>
+    <!--引入又拍云的bootstrap-->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--如果是低于ie9的版本，需要引入一下两个js库，让html5标签有效-->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+                <li><a href="#shop"><span class="glyphicon glyphicon-shopping-cart"></span> Shop</a></li>
+                <li><a href="#support"><span class="glyphicon glyphicon-headphones"></span> Support</a></li>
+            </ul>
+        </div><!-- /.nav-collapse -->
+    </div><!-- /.container -->
+</div>
+<a class="btn btn-primary btn-lg">Hello word</a>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12">
+            <blockquote class="pull-left">
+                这是一个引用的文本
+                <small>引用来自<cite title="xyf的个人博客">xyf的个人博客</cite></small>
+            </blockquote>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12">
+            123456hhhh
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12">123456hhhh</div>
+        <div class="col-lg-4 col-md-6 col-sm-10 col-xs-12">123456hhhh</div>
+    </div>
+</div>
+</div>
+<ul class="list-inline">
+    <li>子项1</li>
+    <li>子项2</li>
+    <li>子项3</li>
+    <li>子项4</li>
+</ul>
+<dl class="dl-horizontal">
+    <dt>标题</dt>
+    <dd>内容</dd>
+    <dt>标题</dt>
+    <dd>内容</dd>
+    <dt>标题</dt>
+    <dd>内容</dd>
+</dl>
+<div class="container">
+    <p class="text-right">123456789</p>
+    <p class="text-left">123456789</p>
+    <p class="text-center">123456789</p>
+    <!--超出自动换行-->
+    <p class="text-justify">123456789</p>
+    <!--首字母大写-->
+    <p class="text-capitalize">capitalize</p>
+    <!--与pullright好像没什么区别-->
+    <blockquote class="blockquote-reverse">
+        这是右引用
+        <small>123456</small>
+    </blockquote>
+    <div>
+        <fieldset>
+            <legend>这是pre代码块</legend>
+            <pre>
+            &lt;article&gt;
+              123456
+            &lt;/article&gt;
+          </pre>
+        </fieldset>
+    </div>
+    <div>
+        <p>可以使用kdb来提示按键输入 <kbd>crtl + p</kbd></p>
+    </div>
+    <div class="table-responsive">
+        <p>这里应该主要还是用到外层的div，overflow</p>
+        <table class="table table-hover table-bordered">
+            <caption class="text-center">这是表格的标题caption</caption>
+            <thead>
+            <tr>
+                <th class="danger">标题1</th>
+                <th>标题1</th>
+                <th class="success">标题1</th>
+                <th>标题1</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="success">
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+            </tr>
+            <tr class="info">
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+            </tr>
+            <tr class="warning">
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+            </tr>
+            <tr class="danger">
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+                <td>111</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <form class="form-horizontal" role="form">
+                <div class="form-group has-success">
+                    <label for="name" class="col-sm-2 col-xs-3 control-label">输入名字：
+                    </label>
+                    <div class="col-sm-10  col-xs-7">
+                        <input id="name" type="text" class="form-control input-lg" placeholder="name">
+                        <p class="help-block">这是帮助文本块</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">文本框输入</label>
+                    <div class="col-sm-8">
+                        <textarea style="resize: none" class="form-control" rows="5"  disabled></textarea>
+                    </div>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">复选框
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="my-radio" type="radio" value="1" checked>选项一
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input name="my-radio" type="radio" value="2">选项二
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-10">
+                        <p class="form-control-static">email@example.com</p>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-default text-center">提交</button>
+            </form>
+        </div>
+    </div>
+</div>
+<!--按钮-->
+<div class="list-inline container">
+    <button class="btn btn-default btn-block">按钮</button>
+    <button class="btn btn-primary active">按钮</button>
+    <button class="btn btn-success btn-xs">按钮</button>
+    <button class="btn btn-info btn-sm">按钮</button>
+    <button class="btn btn-warning btn-lg">按钮</button>
+    <button class="btn btn-danger disabled">按钮</button>
+    <button class="btn btn-link">按钮</button>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-10">
+            <img src="img/music_bg.jpeg" class="img-responsive">
+        </div>
+        <div class="col-md-4 col-sm-6  col-xs-10">
+            <img src="img/music_bg.jpeg" class="img-responsive img-circle">
+        </div>
+        <div class="col-md-4 col-sm-6  col-xs-10">
+            <img src="img/music_bg.jpeg" class="img-responsive img-rounded">
+        </div>
+        <div class="col-md-4 col-sm-6  col-xs-10">
+            <img src="img/music_bg.jpeg" class="img-responsive img-thumbnail">
+        </div>
+    </div>
+    <div class="row">
+        <p>这是正常的字体</p>
+        <p class="text-muted">减弱的字体，颜色变暗，字体大小貌似不变</p>
+        <p class="text-center text-danger">危险！！！ 中间</p>
+    </div>
+    <!--visible-* 只在指定的屏幕可见。相反的  hidden-*  在指定的屏幕隐藏-->
+    <div class="row visible-lg">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Menu <span class="caret"></span></button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">一个连接</a></li>
+                <li><a href="#">一个连接</a></li>
+                <li><a href="#">一个连接</a></li>
+                <li><a href="#">一个连接</a></li>
+            </ul>
+        </div>
+        <!--aria-hidden  辅助设备上隐藏，sr-only 无障碍辅助设备上显示-->
+        <button type="button" class="close"><span aria-hidden="true">x</span>
+            <span class="sr-only">关闭</span></button>
+    </div>
+    <span class="glyphicon glyphicon-search"></span>
+</div>
+<!-- navbar-inverse  用于转变背景色和字体颜色-->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">菜鸟教程</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">iOS</a></li>
+                <li><a href="#">SVN</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        Java <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">jmeter</a></li>
+                        <li><a href="#">EJB</a></li>
+                        <li><a href="#">Jasper Report</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">分离的链接</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">另一个分离的链接</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
