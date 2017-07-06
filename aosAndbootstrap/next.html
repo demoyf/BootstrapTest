@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="dist/aos.css" rel="stylesheet">
+    <style>
+        .code {
+            width: 40%;
+            clear: both;
+            height: 200px;
+            background: #FFF;
+            border-radius: 2px;
+            margin: 12vh 0;
+            padding: 10px;
+            border: 10px solid rebeccapurple;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div style="height: 1000px;">
+
+</div>
+<div class="code" aos="fade-up">
+    <h4>这是一个标题</h4>
+    <p>这是一段文字，这个div使用了aos的动画效果，</p>
+</div>
+<div style="height: 1000px;">
+
+</div>
+<script src="jquery-2.1.1.min.js"></script>
+<script src="dist/aos.js"></script>
+<script>
+    AOS.init({
+        offset: 200,
+        duration: 1000,
+        easing: 'ease-in-sine',
+        delay: 100,
+    });
+</script>
+</body>
+</html>
