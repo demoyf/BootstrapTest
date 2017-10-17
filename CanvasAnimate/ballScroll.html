@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvas" width="600" height="500" style="border: 2px solid gray">
+</canvas>
+<script>
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext("2d");
+    var raf;
+    var ball = {
+        x: 0,
+        y: 0,
+        vx: 5,
+        vy: 3,
+        draw: function () {
+            ctx.fillStyle = '#f0f';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, 25, 0, Math.PI * 2, true);
+            ctx.fill();
+        }
+    };
+    function draw() {
+        ctx.fillStyle = 'rgba(255,255,255,0.3)';
+        ctx.fillRect(0,0,canvas.width,canvas.height);
+        ball.draw();
+        if (ball.x+ball.vx>canvas.width||ball.x+ball.vx<0){
+            ball.vx = -ball.vx;
+        }
+        if (ball.y+ball.vy>canvas.height||ball.y+ball.vy<0) {
+            ball.vy = -ball.vy;
+        }
+        ball.x += ball.vx;
+        ball.y += ball.vy;
+        raf = window.requestAnimationFrame(draw);
+    }
+    canvas.addEventListener("mouseover", function (e) {
+        raf = window.requestAnimationFrame(draw);
+    });
+    canvas.addEventListener("mouseout", function (e) {
+        window.cancelAnimationFrame(raf);
+    });
+</script>
+</body>
+</html>
