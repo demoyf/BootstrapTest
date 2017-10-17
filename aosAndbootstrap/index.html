@@ -8,8 +8,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Title</title>
     <!--引入又拍云的bootstrap-->
-    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet">
     <link href="dist/aos.css" rel="stylesheet">
+    <script>
+//        sessionStorage.setItem()
+        console.log("demo",111);
+    </script>
+
     <style>
         body {
             overflow-x: hidden;
@@ -115,9 +121,9 @@
             body .futures > img {
                 position: absolute;
                 top: -160px;
-                left: -150px;
+                left: -330px;
                 opacity: 0.1;
-                width:80%;
+                width:100%;
                 min-width: 500px;
                 z-index: -50;
             }
@@ -162,7 +168,7 @@
                 top: 0px;
                 left: -150px;
                 opacity: 0.1;
-                width:80%;
+                width:100%;
                 min-width: 700px;
                 z-index: -50;
             }
@@ -194,7 +200,48 @@
             position: relative;
             overflow: hidden;
         }
+        .futures .container .title-text > h1 {
+            margin-top: 150px;
+            font-size: 50px;
+            font-weight: 900;
+            margin-bottom: 150px;
+        }
+        .futures .container .row > div {
+            padding: 2%;
+        }
+        .futures .container .row > div > .some-info-div {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 5px 5px rgba(0,0,0,0.05);
+            padding-bottom: 50px;
+        }
+        .futures .container .item-div > div  .some-info-div div  img.icon {
+            width: 60px;
+            height: 60px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            opacity: 0.6;
+        }
+        .futures .container .item-div > div  .some-info-div:hover div img.icon {
+            opacity: 1;
+        }
+        p.text-large {
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-left: 40px;
+            margin-right: 40px;
+            line-height: 25px;
+            font-weight: 300;
+            color: black;
+            opacity: 0.5;
+            font-family: cursive;
+        }
+        .futures .container .item-div > div  .some-info-div h3 {
+            margin: 0 30px;
+        }
+        .faq-div {
 
+        }
     </style>
 </head>
 <body>
@@ -257,7 +304,63 @@
         <div class="row title-text">
             <h1 class="text-center text-uppercase">Outstanding features</h1>
         </div>
-        <div class="row" style="height: 1000px">
+        <div class="row item-div">
+            <div class="col-md-6 col-sm-6 col-xs-12" >
+                <div class="some-info-div" data-aos="fade-up-right">
+                   <div class="text-center">
+                       <img src="img/demo.svg" class="icon">
+                   </div>
+                    <h3 class="text-center">Adding emails to your lists </h3>
+                    <p  class="text-muted text-center text-large">
+                        Daily active users, monthly recurring revenue, signups
+                        per day - see your most important KPIs on interactive, real-time dashboards anywhere, anytime.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="some-info-div" data-aos="fade-up-left">
+                    <div class="text-center">
+                        <img src="img/demo_1.svg" class="icon">
+                    </div>
+                    <h3 class="text-center">Sending Emails</h3>
+                    <p  class="text-muted text-center text-large">
+                        Daily active users, monthly recurring revenue, signups
+                        per day - see your most important KPIs on interactive, real-time dashboards anywhere, anytime.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row item-div">
+            <div class="col-md-6 col-sm-6 col-xs-12" >
+                <div class="some-info-div" data-aos="fade-up-right">
+                    <div class="text-center">
+                        <img src="img/demo_2.svg" class="icon">
+                    </div>
+                    <h3 class="text-center">Sending Web Push Notifications</h3>
+                    <p  class="text-muted text-center text-large">
+                        Daily active users, monthly recurring revenue, signups
+                        per day - see your most important KPIs on interactive, real-time dashboards anywhere, anytime.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <div class="some-info-div" data-aos="fade-up-left">
+                    <div class="text-center">
+                        <img src="img/demo_3.svg" class="icon">
+                    </div>
+                    <h3 class="text-center">Reports and Notifications</h3>
+                    <p class="text-muted text-center text-large">
+                        Daily active users, monthly recurring revenue, signups
+                        per day - see your most important KPIs on interactive, real-time dashboards anywhere, anytime.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="faq-div">
+    <div class="container">
+        <div class="panel-group" id="my-accordion">
 
         </div>
     </div>
@@ -371,11 +474,11 @@
 <![endif]-->
 <!--不管是否要全局设置，都必须要先调用init方法，js文件都需要放在内容之后-->
 <script>
-    AOS.init({
-        duration: 500,
-        easing: 'ease-in-sine',
-        delay: 0,
-    });
+        AOS.init({
+            duration: 500,
+            easing: 'ease-in-sine',
+            delay: 0,
+        });
 </script>
 </body>
 </html>
