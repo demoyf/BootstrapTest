@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(window).load(function () {
+                $('div').each(function () {
+                    $(this).css(transformDiv());
+                });
+                $('img').each(function () {
+                    var height = parseInt($(this).height());
+                    var scale = 1;
+                    var translate = 0;
+                    if (height < 300) {
+                        scale = 300 / height;
+                        translate = 10 * scale;
+                    }
+                    if (height<200) {
+                        scale += 0.3;
+                    }
+                    $(this).css(tranform(scale,translate));
+                });
+            });
+            function tranform(scale,translate) {
+                return {
+                    '-webkit-transform': 'scale(' + scale + ') translateY('+translate+'%)',
+                    '-moz-transform': 'scale(' + scale + ') translateY('+translate+'%)',
+                    '-ms-transform': 'scale(' + scale + ') translateY('+translate+'%)',
+                    '-o-transform': 'scale(' + scale + ') translateY('+translate+'%)',
+                    'transform': 'scale(' + scale + ') translateY('+translate+'%)',
+                };
+            }
+            function transformDiv() {
+                return{
+                    '-webkit-transform': 'translate3d(0,0,0)',
+                    '-moz-transform': 'translate3d(0,0,0)',
+                    '-ms-transform': 'translate3d(0,0,0)',
+                    '-o-transform': 'translate3d(0,0,0)',
+                    'transform': 'translate3d(0,0,0) ',
+                    'opacity':1
+                };
+            }
+        });
+    </script>
+    <style>
+        .find-div-body {
+            position: relative;
+            top: 30px;
+            right: 0px;
+            width: 400px;
+            height: 200px;
+            padding: 8px;
+            background-color: #FFFFFF;
+            border: #cccccc solid 1px;
+            border-radius: 3px;
+        }
+
+        .find-div-body:before {
+            box-sizing: content-box;
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: -16px;;
+            right: 41px;
+            padding: 0;
+            border-bottom: 8px solid #FFFFFF;
+            border-top: 8px solid transparent;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            display: block;
+            content: '';
+            z-index: 12;
+        }
+
+        .find-div-body:after {
+            box-sizing: content-box;
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: -18px;;
+            right: 40px;
+            padding: 0;
+            border-bottom: 9px solid #cccccc;
+            border-top: 9px solid transparent;
+            border-left: 9px solid transparent;
+            border-right: 9px solid transparent;
+            display: block;
+            content: '';
+            z-index: 10
+        }
+
+        .demo {
+            width: 0;
+            border: 100px solid transparent;
+            position: absolute;
+            left: 10%;
+            top: 10%;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            transform: rotate(90deg);
+            border-image: url("images/2.jpg");
+            border-image-repeat: round;
+        }
+
+        .triangle-image {
+            width: 300px;
+            top: 100px;
+            background-color: rebeccapurple;
+            clip-path: polygon(0% 0%, 100% 0%, 100% 50%);
+            position: absolute;
+            height: 300px;
+            overflow: hidden;
+            left: 40%;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(0, -100%, 0);
+            -moz-transform: translate3d(0, -100%, 0);
+            -ms-transform: translate3d(0, -100%, 0);
+            -o-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
+            opacity: 0;
+        }
+        .triangle-image:hover {
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(30%, 0, 0)!important;
+            -moz-transform: translate3d(30%, 0, 0)!important;
+            -ms-transform: translate3d(30%, 0, 0)!important;
+            -o-transform: translate3d(30%, 0, 0)!important;
+            transform: translate3d(30%, 0, 0)!important;
+        }
+
+        .triangle-image img {
+            width: 100%;
+        }
+
+        .second-triangle {
+            width: 300px;
+            position: absolute;
+            top: 100px;
+            height: 300px;
+            overflow: hidden;
+            left: 40%;
+            clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(-200%,0,0);
+            -moz-transform: translate3d(-200%,0,0);
+            -ms-transform: translate3d(-200%,0,0);
+            -o-transform: translate3d(-200%,0,0);
+            transform: translate3d(-200%,0,0);
+            opacity: 0;
+        }
+
+        .second-triangle:hover {
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(-25%, -13.5%, 0)!important;
+            -moz-transform: translate3d(-25%, -13.5%, 0)!important;
+            -ms-transform: translate3d(-25%, -13.5%, 0)!important;
+            -o-transform: translate3d(-25%, -13.5%, 0)!important;
+            transform: translate3d(-25%, -13.5%, 0)!important;
+        }
+
+        .third-triangle {
+            width: 300px;
+            position: absolute;
+            left: 40%;
+            top: 250px;
+            height: 300px;
+            overflow: hidden;
+            clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(200%,0,0);
+            -moz-transform: translate3d(200%,0,0);
+            -ms-transform: translate3d(200%,0,0);
+            -o-transform: translate3d(200%,0,0);
+            transform: translate3d(200%,0,0);
+            opacity: 0;
+        }
+
+        .third-triangle:hover {
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(25%, -13.5%, 0)!important;
+            -moz-transform: translate3d(25%, -13.5%, 0)!important;
+            -ms-transform: translate3d(25%, -13.5%, 0)!important;
+            -o-transform: translate3d(25%, -13.5%, 0)!important;
+            transform: translate3d(25%, -13.5%, 0)!important;
+        }
+
+        .fourth-triangle {
+            width: 300px;
+            position: absolute;
+            clip-path: polygon(0% 0%, 100% 50%, 0% 50%);
+            left: 40%;
+            top: 400px;
+            height: 300px;
+            overflow: hidden;
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(0,100%,0);
+            -moz-transform: translate3d(0,100%,0);
+            -ms-transform: translate3d(0,100%,0);
+            -o-transform: translate3d(0,100%,0);
+            transform: translate3d(0,100%,0);
+            opacity: 0;
+        }
+
+        .fourth-triangle:hover {
+            -webkit-transition: all 1s;
+            -moz-transition: all 1s;
+            -ms-transition: all 1s;
+            -o-transition: all 1s;
+            transition: all 1s;
+            -webkit-transform: translate3d(-50%, 0, 0)!important;
+            -moz-transform: translate3d(-50%, 0, 0)!important;
+            -ms-transform: translate3d(-50%, 0, 0)!important;
+            -o-transform: translate3d(-50%, 0, 0)!important;
+            transform: translate3d(-50%, 0, 0)!important;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<!--<div class="find-div-body">
+</div>-->
+<!--<div class="demo">
+</div>-->
+<div class="triangle-image">
+    <img src="images/2.jpg">
+</div>
+<div class="second-triangle">
+    <img src="images/5.jpg" width="100%">
+</div>
+<div class="third-triangle">
+    <img src="images/p8.jpg" width="100%">
+</div>
+<div class="fourth-triangle">
+    <img src="images/p7.jpg" width="100%">
+</div>
+</body>
+</html>
